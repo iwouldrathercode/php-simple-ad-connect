@@ -1,6 +1,6 @@
 <?php
 
-namespace Sphtech\SimpleADConnect;
+namespace Iwouldrathercode\SimpleADConnect;
 
 class Connect
 {

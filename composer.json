@@ -1,5 +1,5 @@
 {
-    "name": "sphtech/php-ldap-connect",
+    "name": "iwouldrathercode/php-simple-ad-connect",
     "description": "LDAP wrapper for AD authentication",
     "type": "library",
     "license": "MIT",
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4" : {
-            "Sphtech\\SimpleADConnect\\": "src/"
+            "Iwouldrathercode\\SimpleADConnect\\": "src/"
         }
     },
     "config": {
