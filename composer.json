@@ -10,8 +10,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/sphtech/php-ldap-connect/issues",
-        "source": "https://github.com/sphtech/php-ldap-connect"
+        "issues": "https://github.com/iwouldrathercode/php-ldap-connect/issues",
+        "source": "https://github.com/iwouldrathercode/php-ldap-connect"
     },
     "require": {
         "php": ">=7.0",
