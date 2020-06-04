@@ -21,9 +21,15 @@ if(!isset($argv[2])) {
 }
 $password = $argv[2];
 
-$connection = new Connect();
+$options = [
+  'host' => 'ldap://corpldap2.sphnet.com.sg:389',
+  'ou' => 'sph',
+  'dc' => ['sphnet','com','sg'],
+];
 
-$connectionState = ($connection->attempt($username, $password)) ? "Logged in" : "Could not login";
+$connection = new Connect( $options );
+
+$connectionState = ($connection->login($username, $password)) ? "Logged in" : "Could not login";
 
 echo $coloredOutput->apply("color_15", "Trying to connect with AD".PHP_EOL);
 echo $coloredOutput->apply("color_15", $connectionState.PHP_EOL);
