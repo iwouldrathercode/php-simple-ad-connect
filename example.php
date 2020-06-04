@@ -22,9 +22,9 @@ if(!isset($argv[2])) {
 $password = $argv[2];
 
 $options = [
-  'host' => 'ldap://corpldap2.sphnet.com.sg:389',
-  'ou' => 'sph',
-  'dc' => ['sphnet','com','sg'],
+  'host' => getenv('LDAP_HOST'),
+  'ou' => getenv('LDAP_OU'),
+  'dc' => explode("|", getenv('LDAP_DC')),
 ];
 
 $connection = new Connect( $options );
