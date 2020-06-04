@@ -8,38 +8,10 @@ class Connect
     {
         //
 	}
-	
-	public function connect()
-	{
-		// using ldap bind
-		$ldaprdn  = '';     // ldap rdn or dn
-		$ldappass = '';  // associated password
-
-		// connect to ldap server
-		$ldapconn = ldap_connect("ldap://corpldap2.sphnet.com.sg:389")
-			or die("Could not connect to LDAP server.");
-
-		if ($ldapconn) {
-
-			// binding to ldap server
-			$ldapbind = ldap_bind($ldapconn, $ldaprdn, $ldappass);
-
-			// verify binding
-			if ($ldapbind) {
-				echo "LDAP bind successful...";
-			} else {
-				echo "LDAP bind failed...";
-			}
-
-		}
-    }
     
-    public function connect_ldap() {
+    public function attempt($username, $password) {
 
         echo "reached function".PHP_EOL;
-        
-		$username = '';
-		$password = '';
         
         echo "user, pass initiated".PHP_EOL;
 

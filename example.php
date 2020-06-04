@@ -7,8 +7,23 @@ require('vendor/autoload.php');
 use Iwouldrathercode\SimpleADConnect\Connect;
 use JakubOnderka\PhpConsoleColor\ConsoleColor;
 
-$connection = new Connect();
 $coloredOutput = new ConsoleColor();
 
+if(!isset($argv[1])) {
+  echo $coloredOutput->apply("bg_color_1", "Username should be provided to login !".PHP_EOL);
+  exit(1);
+}
+$username = $argv[1];
+
+if(!isset($argv[2])) {
+  echo $coloredOutput->apply("bg_color_1", "Password should be provided to login !".PHP_EOL);
+  exit(1);
+}
+$password = $argv[2];
+
+$connection = new Connect();
+
+$connectionState = ($connection->attempt($username, $password)) ? "Logged in" : "Could not login";
+
 echo $coloredOutput->apply("color_15", "Trying to connect with AD".PHP_EOL);
-echo $coloredOutput->apply("color_15", $connection->connect().PHP_EOL);
+echo $coloredOutput->apply("color_15", $connectionState.PHP_EOL);
