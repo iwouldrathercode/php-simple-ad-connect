@@ -12,8 +12,8 @@ class Connect
 	public function connect()
 	{
 		// using ldap bind
-		$ldaprdn  = 'shankarg@sph.com.sg';     // ldap rdn or dn
-		$ldappass = 'sp63Zgzn';  // associated password
+		$ldaprdn  = '';     // ldap rdn or dn
+		$ldappass = '';  // associated password
 
 		// connect to ldap server
 		$ldapconn = ldap_connect("ldap://corpldap2.sphnet.com.sg:389")
@@ -38,8 +38,8 @@ class Connect
 
         echo "reached function".PHP_EOL;
         
-		$username = 'shankarg';
-		$password = 'sp63Zgzn';
+		$username = '';
+		$password = '';
         
         echo "user, pass initiated".PHP_EOL;
 
@@ -71,12 +71,10 @@ class Connect
             echo "after bind".PHP_EOL;
 
             if($bind){
-			    echo "logged in";
+                return true;
 			} else {
-				echo "not logged in";	
+                return false;
 			} 
-		}			 
-
-		//return !$this->errorCode;		
+		}	
 	}
 }
