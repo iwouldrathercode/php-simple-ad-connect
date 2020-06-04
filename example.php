@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require('vendor/autoload.php');
 
-use Sphtech\SimpleADConnect\Connect;
+use Iwouldrathercode\SimpleADConnect\Connect;
 use JakubOnderka\PhpConsoleColor\ConsoleColor;
 
 $coloredOutput = new ConsoleColor();
