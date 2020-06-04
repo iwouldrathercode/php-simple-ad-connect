@@ -1,5 +1,5 @@
 {
-    "name": "iwouldrathercode/php-ldap-connect",
+    "name": "sphtech/php-ldap-connect",
     "description": "LDAP wrapper for AD authentication",
     "type": "library",
     "license": "MIT",
@@ -10,8 +10,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/iwouldrathercode/php-ldap-connect/issues",
-        "source": "https://github.com/iwouldrathercode/php-ldap-connect"
+        "issues": "https://github.com/sphtech/php-ldap-connect/issues",
+        "source": "https://github.com/sphtech/php-ldap-connect"
     },
     "require": {
         "php": ">=7.0",
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4" : {
-            "Iwouldrathercode\\SimpleADConnect\\": "src/"
+            "Sphtech\\SimpleADConnect\\": "src/"
         }
     },
     "config": {
