@@ -10,8 +10,8 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/iwouldrathercode/php-ldap-connect/issues",
-        "source": "https://github.com/iwouldrathercode/php-ldap-connect"
+        "issues": "https://github.com/iwouldrathercode/php-simple-ad-connect/issues",
+        "source": "https://github.com/iwouldrathercode/php-simple-ad-connect"
     },
     "require": {
         "php": ">=7.0",
@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4" : {
-            "Iwouldrathercode\\SimpleADConnect\\": "src/"
+            "Iwouldrathercode\\SimpleLdap\\": "src/"
         }
     },
     "config": {

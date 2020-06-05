@@ -4,7 +4,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 require('vendor/autoload.php');
 
-use Iwouldrathercode\SimpleADConnect\Connect;
+use Iwouldrathercode\SimpleLdap\ActiveDirectory;
 use JakubOnderka\PhpConsoleColor\ConsoleColor;
 
 $coloredOutput = new ConsoleColor();
@@ -27,7 +27,7 @@ $options = [
   'dc' => explode("|", getenv('LDAP_DC')),
 ];
 
-$connection = new Connect($options);
+$connection = new ActiveDirectory($options);
 
 $connectionState = ($connection->login($username, $password)) ? "Logged in" : "Could not login";
 

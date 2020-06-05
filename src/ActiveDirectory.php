@@ -1,8 +1,8 @@
 <?php
 
-namespace Iwouldrathercode\SimpleADConnect;
+namespace Iwouldrathercode\SimpleLdap;
 
-class Connect
+class ActiveDirectory
 {
     protected $options;
 
