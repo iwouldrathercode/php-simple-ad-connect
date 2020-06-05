@@ -30,20 +30,23 @@ class ActiveDirectory
     {
         $options = $this->options;
         
-        $dc_string = implode(".", $options['dc']);
-        $connection = ldap_connect($options['host']);
-        ldap_set_option($connection, LDAP_OPT_PROTOCOL_VERSION, 3);
-        ldap_set_option($connection, LDAP_OPT_REFERRALS, 0);
-
         try {
+
+            $dc_string = implode(".", $options['dc']);
+            $connection = ldap_connect($options['host']);
+            ldap_set_option($connection, LDAP_OPT_PROTOCOL_VERSION, 3);
+            ldap_set_option($connection, LDAP_OPT_REFERRALS, 0);
+
+        
             if ($connection) {
-                $bind = @ldap_bind($connection, "{$username}@{$dc_string}", $password) or die("Could not bind to LDAP");
+                $bind = @ldap_bind($connection, "{$username}@{$dc_string}", $password);
                 if ($bind) {
                     return true;
                 } else {
                     return false;
                 }
             }
+
         } catch (\Exception $exception) {
             return $exception;
         }
